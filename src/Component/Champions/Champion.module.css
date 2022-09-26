@@ -1,0 +1,23 @@
+/* @font-face {
+    font-family: leagueFont;
+    src: url("../../../assets/fonts/beaufortforlol-italic.otf");
+} */
+
+.champion {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+}
+
+.champion img {
+    width: 100%;
+    height: 100%;
+}
+
+.champion h2 {
+    text-align: center;
+    /* font-family: leagueFont; */
+    font-size: 1.25rem;
+    margin: 0 1rem;
+    color: white;
+}

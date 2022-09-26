@@ -1,0 +1,11 @@
+.champion-list {
+    padding-left: 100px;
+    padding-right: 100px;
+    list-style: none;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(5, 1fr); */
+}
+
+@media (min-width: 1200px) {}
