@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/JC-Tan/LoLWebPage/static/css/main.6b640f02.css",
+    "main.js": "/JC-Tan/LoLWebPage/static/js/main.51a8dfc5.js",
+    "static/js/787.21bc5cbc.chunk.js": "/JC-Tan/LoLWebPage/static/js/787.21bc5cbc.chunk.js",
+    "static/media/background-landing.jpg": "/JC-Tan/LoLWebPage/static/media/background-landing.96003f5531825673becb.jpg",
+    "static/media/beaufortforlol-italic.otf": "/JC-Tan/LoLWebPage/static/media/beaufortforlol-italic.3bfab7db00997020e5df.otf",
+    "index.html": "/JC-Tan/LoLWebPage/index.html",
+    "main.6b640f02.css.map": "/JC-Tan/LoLWebPage/static/css/main.6b640f02.css.map",
+    "main.51a8dfc5.js.map": "/JC-Tan/LoLWebPage/static/js/main.51a8dfc5.js.map",
+    "787.21bc5cbc.chunk.js.map": "/JC-Tan/LoLWebPage/static/js/787.21bc5cbc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b640f02.css",
+    "static/js/main.51a8dfc5.js"
+  ]
+}
