@@ -8,7 +8,7 @@ const ChampionTag = (props) => {
       ? ["MODERATE", 2]
       : ["HIGH", 3];
 
-  const tagImage = `../../assets/imgs/npe-ft-role-icon-${props.tag.toLowerCase()}.png`;
+  const tagImage = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/npe-ft-role-icon-${props.tag.toLowerCase()}.png`;
   return (
     <div className={`${styles["tag-wrapper"]}`}>
       <ul className={styles.ul}>
