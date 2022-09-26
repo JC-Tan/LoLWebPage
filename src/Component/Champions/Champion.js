@@ -13,7 +13,7 @@ const Champion = (props) => {
   // For loading
   const [isLoading, setIsLoading] = useState(false);
 
-  const champImageURL = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${props.champId}_0.jpg`;
+  const champImageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${props.champId}_0.jpg`;
 
   const fetchChampInfoHandler = useCallback(async () => {
     setIsLoading(true);
@@ -21,7 +21,7 @@ const Champion = (props) => {
 
     try {
       const response = await fetch(
-        `http://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/champion/${props.champId}.json`
+        `https://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/champion/${props.champId}.json`
       );
 
       if (!response.ok) {
