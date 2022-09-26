@@ -13,8 +13,8 @@ const ModalOverlay = (props) => {
   const info = props.champInfo;
   return (
     <div className={styles.modal}>
-      <header className={styles.header}>
-        <h2>{props.champName}</h2>
+      <header>
+        <h1 className={styles.header}>{props.champName.toUpperCase()}</h1>
       </header>
       <hr />
       <ChampionLore
@@ -23,8 +23,8 @@ const ModalOverlay = (props) => {
         lore={info.lore}
       />
       <SpellList champInfo={info} />
-      <header className={styles.header}>
-        <h2>AVAILABLE SKINS</h2>
+      <header>
+        <h1 className={styles.header}>AVAILABLE SKINS</h1>
       </header>
       <hr />
       <SkinList champName={info.name} champId={info.id} skinList={info.skins} />
