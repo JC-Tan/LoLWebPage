@@ -21,3 +21,55 @@
 .background {
     box-sizing: border-box;
 }
+
+@media (max-width: 360px) {
+    .main-wrapper {
+        position: relative;
+        z-index: 102;
+    }
+
+    .list-wrapper {
+        position: absolute;
+        z-index: 103;
+        /* top: 0;
+        bottom: 0; */
+        overflow: auto;
+        /* background-color: #2F2F31; */
+        background-color: rgba(47, 47, 49, 0.5);
+    }
+
+    .skin-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .background {
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+    .main-wrapper {
+        position: relative;
+        z-index: 102;
+    }
+
+    .list-wrapper {
+        position: absolute;
+        z-index: 103;
+        /* top: 0;
+        bottom: 0; */
+        overflow: auto;
+        /* background-color: #2F2F31; */
+        background-color: rgba(47, 47, 49, 0.5);
+    }
+
+    .skin-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .background {
+        box-sizing: border-box;
+    }
+}

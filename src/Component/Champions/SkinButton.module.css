@@ -20,3 +20,37 @@
 .button:focus {
     background-color: #a6a6a6;
 }
+
+@media (max-width: 360px) {
+    .button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: white;
+        padding: 3px 8px;
+        text-align: left;
+        text-decoration: none;
+        font-size: 0.5rem;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        /* margin: 4px 2px; */
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+    .button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: white;
+        padding: 3px 8px;
+        text-align: left;
+        text-decoration: none;
+        font-size: 0.5rem;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        /* margin: 4px 2px; */
+        cursor: pointer;
+    }
+}
