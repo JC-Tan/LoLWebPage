@@ -17,3 +17,17 @@
 * {
   font-family: leagueFont;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .background {
+    background-image: url("../public/assets/imgs/background-landing.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .list-container {
+    overflow: auto;
+  }
+}
