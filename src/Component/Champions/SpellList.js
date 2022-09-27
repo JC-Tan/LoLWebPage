@@ -73,7 +73,7 @@ const SpellList = (props) => {
       </div>
       <div className={styles.description}>
         <h2>{spellName}</h2>
-        <p>{description}</p>
+        <p>{description.replaceAll(/<.*?>/g, "")}</p>
       </div>
     </Fragment>
   );
