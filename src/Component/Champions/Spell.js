@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import styles from "./Spell.module.css";
 const Spell = (props) => {
   let url = `http://ddragon.leagueoflegends.com/cdn/12.17.1/img/passive/${props.img}`;
 

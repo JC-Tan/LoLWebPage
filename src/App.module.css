@@ -5,10 +5,6 @@
   background-attachment: fixed;
 }
 
-.list-container {
-  overflow: auto;
-}
-
 @font-face {
   font-family: leagueFont;
   src: url("../public/assets/fonts/beaufortforlol-italic.otf");
