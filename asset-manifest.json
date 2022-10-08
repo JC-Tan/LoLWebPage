@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/LoLWebPage/static/css/main.f5cb514d.css",
-    "main.js": "/LoLWebPage/static/js/main.fe783348.js",
+    "main.css": "/LoLWebPage/static/css/main.620912c7.css",
+    "main.js": "/LoLWebPage/static/js/main.bb13cca6.js",
     "static/js/787.21bc5cbc.chunk.js": "/LoLWebPage/static/js/787.21bc5cbc.chunk.js",
     "static/media/background-landing.jpg": "/LoLWebPage/static/media/background-landing.96003f5531825673becb.jpg",
     "static/media/beaufortforlol-italic.otf": "/LoLWebPage/static/media/beaufortforlol-italic.3bfab7db00997020e5df.otf",
     "index.html": "/LoLWebPage/index.html",
-    "main.f5cb514d.css.map": "/LoLWebPage/static/css/main.f5cb514d.css.map",
-    "main.fe783348.js.map": "/LoLWebPage/static/js/main.fe783348.js.map",
+    "main.620912c7.css.map": "/LoLWebPage/static/css/main.620912c7.css.map",
+    "main.bb13cca6.js.map": "/LoLWebPage/static/js/main.bb13cca6.js.map",
     "787.21bc5cbc.chunk.js.map": "/LoLWebPage/static/js/787.21bc5cbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5cb514d.css",
-    "static/js/main.fe783348.js"
+    "static/css/main.620912c7.css",
+    "static/js/main.bb13cca6.js"
   ]
 }
