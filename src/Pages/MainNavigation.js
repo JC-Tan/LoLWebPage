@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
+import styles from "./MainNavigation.module.css";
 
-const MainNavigation = (props) => {
+const MainNavigation = () => {
   return (
-    <header>
-      <div>Div with logo</div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/LoLWebPage">Champion Page!</Link>
-          </li>
-          <li>
-            <Link to="/user-page">User Page!</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div className={`${styles["main-nav-wrapper"]}`}>
+      <div className={`${styles["nav-item-wrapper"]}`}>
+        <Link to="/LoLWebPage" className={`${styles["nav-content"]}`}>
+          <p className={styles.par}>Champions</p>
+          <div className={`${styles["blue-bar"]}`} />
+        </Link>
+      </div>
+      <div className={`${styles["nav-item-wrapper"]}`}>
+        <Link to="/user-page" className={`${styles["nav-content"]}`}>
+          <p className={styles.par}>Users</p>
+          <div className={`${styles["blue-bar"]}`} />
+        </Link>
+      </div>
+    </div>
   );
 };
 

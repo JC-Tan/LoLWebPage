@@ -9,8 +9,8 @@
     top: 0;
     bottom: 0;
     overflow: auto;
-    /* background-color: #2F2F31; */
-    background-color: rgba(47, 47, 49, 0.5);
+    /* background-color: #061C25; */
+    background-color: rgba(6, 28, 37, 0.5);
 }
 
 .skin-list {
@@ -31,11 +31,8 @@
     .list-wrapper {
         position: absolute;
         z-index: 103;
-        /* top: 0;
-        bottom: 0; */
         overflow: auto;
-        /* background-color: #2F2F31; */
-        background-color: rgba(47, 47, 49, 0.5);
+        background-color: rgba(6, 28, 37, 0.5);
     }
 
     .skin-list {
@@ -57,11 +54,8 @@
     .list-wrapper {
         position: absolute;
         z-index: 103;
-        /* top: 0;
-        bottom: 0; */
         overflow: auto;
-        /* background-color: #2F2F31; */
-        background-color: rgba(47, 47, 49, 0.5);
+        background-color: rgba(6, 28, 37, 0.5);
     }
 
     .skin-list {
