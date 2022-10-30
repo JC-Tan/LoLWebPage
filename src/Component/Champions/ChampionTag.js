@@ -1,5 +1,15 @@
 import styles from "./ChampionTag.module.css";
 
+/**
+ * ChampionTag
+ * Displays the champion's role and difficulty.
+ * Roles are:
+ *            - Fighter
+ *            - Mage
+ *            - Marksman
+ *            - Tank
+ *            - Support
+ */
 const ChampionTag = (props) => {
   const difficulty =
     props.diff < 4

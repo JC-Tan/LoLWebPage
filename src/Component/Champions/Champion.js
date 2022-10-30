@@ -3,6 +3,10 @@ import Card from "../UI/Card";
 import ChampionModal from "../UI/ChampionModal";
 import styles from "./Champion.module.css";
 
+/**
+ * Champion
+ * Grabs a champion's information
+ */
 const Champion = (props) => {
   const [openModal, setOpenModal] = useState(false);
   const [champInfo, setChampInfo] = useState();
@@ -28,8 +32,6 @@ const Champion = (props) => {
         throw new Error("Something went wrong!");
       } else {
         const data = await response.json();
-        // console.log(typeof data);
-        // const test = { ...data.data };
         setChampInfo(data);
       }
     } catch (error) {

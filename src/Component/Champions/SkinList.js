@@ -5,6 +5,11 @@ import styles from "./SkinList.module.css";
 
 const DEFAULT_SKIN = 0;
 
+/**
+ * SkinList
+ * Holds all the skins of a champion. Retrieves the name
+ * of the skin and passes it Skin component
+ */
 const SkinList = (props) => {
   // Set the background image to the default SKIN
   const [backgroundImg, setBackgroundImg] = useState(

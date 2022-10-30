@@ -2,6 +2,10 @@ import { Fragment, useState } from "react";
 import Spell from "./Spell";
 import styles from "./SpellList.module.css";
 
+/**
+ * SpellList
+ * Contains the list of spells that each champion has
+ */
 const SpellList = (props) => {
   const spellList = props.champInfo.spells;
   const passive = props.champInfo.passive;

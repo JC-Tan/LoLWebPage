@@ -1,6 +1,11 @@
 import styles from "./ChampionLore.module.css";
 import ChampionTag from "./ChampionTag";
 
+/**
+ * ChampionLore
+ * Used to display a champion's lore. It also
+ * houses the ChampionTag
+ */
 const ChampionLore = (props) => {
   return (
     <div className={styles.container}>

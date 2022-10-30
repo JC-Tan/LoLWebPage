@@ -2,6 +2,12 @@ import { useState, useEffect, useCallback } from "react";
 import ChampionList from "../Component/Champions/ChampionList";
 import styles from "./ChampionPage.module.css";
 
+/**
+ * ChampionPage
+ * Houses all the information relevant to a champion.
+ * It also retrieves the champion names and passes it
+ * the ChampionList component
+ */
 const ChampionPage = (props) => {
   // List of champs
   const [champList, setChampList] = useState([]);
@@ -13,7 +19,6 @@ const ChampionPage = (props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Function that retrieves the json of champs
-  // useCallback is used for efficiency
   const fetchChampionsHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);

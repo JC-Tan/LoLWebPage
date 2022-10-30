@@ -1,6 +1,10 @@
 import Champion from "./Champion";
 import styles from "./ChampionList.module.css";
 
+/**
+ * ChampionList
+ * Displays all the champions.
+ */
 const ChampionList = (props) => {
   if (props.champList.length === 0) {
     console.log("here");

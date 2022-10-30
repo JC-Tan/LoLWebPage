@@ -1,6 +1,10 @@
 import { Fragment } from "react";
 import styles from "./SkinButton.module.css";
 
+/*
+ * SkinButton
+ * Basically a button with dividers at the bottom
+ */
 const SkinButton = (props) => {
   // Get rid "default" and put champ name instead
   const skinName =

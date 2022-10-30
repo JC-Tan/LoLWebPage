@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./MainNavigation.module.css";
 
+/**
+ * MainNavigation
+ * Contains the buttons that brings the user
+ * to a different page.
+ */
 const MainNavigation = () => {
   return (
     <div className={`${styles["main-nav-wrapper"]}`}>
