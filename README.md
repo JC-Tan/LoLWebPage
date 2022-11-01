@@ -1,6 +1,22 @@
-# Website Link
+# Welcome!
 
-(https://jc-tan.github.io/LoLWebPage/)
+LoLWebPage is a single page web application made with React. The goal of this project is for me to learn HTML, CSS, JavaScript, and React.
+
+The web app allows you to:
+  - Look at a champion's lore, skills, and available skins
+  - Fetch a player's match history (under construction)
+
+# Preview
+The link to the page is just below but if you don't have time then here's a preview
+Home page:
+![image](https://user-images.githubusercontent.com/93283233/199354305-0c3a385f-d45c-4d0d-89f0-02dd5ca118c4.png)
+
+Champion closeup:
+![image](https://user-images.githubusercontent.com/93283233/199354714-17d17646-6b5b-4574-8665-79df3c134a5d.png)
+
+## Page Link
+
+https://jc-tan.github.io/LoLWebPage/
 
 # Getting Started with Create React App
 
