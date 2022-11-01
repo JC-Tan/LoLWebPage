@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import MatchHistory from "./MatchHistory";
 
 /**
  * User
@@ -18,11 +19,7 @@ const User = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
 
-  useEffect(() => {
-    fetchUserInfoHandler();
-  }, [props.name]);
-
-  async function fetchUserInfoHandler() {
+  const fetchUserInfoHandler = useCallback(async () => {
     setError(null);
     setIsLoading(true);
     if (props.name.length === 0) {
@@ -43,15 +40,17 @@ const User = (props) => {
       setError(error.message);
     }
     setIsLoading(false);
-  }
+  }, [props.name]);
+
+  useEffect(() => {
+    fetchUserInfoHandler();
+  }, [fetchUserInfoHandler]);
 
   let content = (
     <div>
-      <h1>id: {userData.id}</h1>
-      <h1>accountId: {userData.accountId}</h1>
       <h1>name: {userData.name}</h1>
-      <h1>puuid: {userData.puuid}</h1>
       <h1>summonerLevel: {userData.summonerLevel}</h1>
+      <MatchHistory puuid={userData.puuid} />
     </div>
   );
 
