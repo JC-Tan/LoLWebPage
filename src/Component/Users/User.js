@@ -50,7 +50,15 @@ const User = (props) => {
     <div>
       <h1>name: {userData.name}</h1>
       <h1>summonerLevel: {userData.summonerLevel}</h1>
-      <MatchHistory puuid={userData.puuid} />
+      <img
+        src={`https://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${userData.profileIconId}.png`}
+        alt="Loading"
+      />
+      <MatchHistory
+        puuid={userData.puuid}
+        queues={props.queues}
+        summonerSpells={props.summonerSpells}
+      />
     </div>
   );
 

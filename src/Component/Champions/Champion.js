@@ -25,7 +25,7 @@ const Champion = (props) => {
 
     try {
       const response = await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/champion/${props.champId}.json`
+        `https://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/champion/${props.champId}.json`
       );
 
       if (!response.ok) {

@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
+import ChampUsed from "./ChampUsed";
 import GameType from "./GameType";
+import styles from "./Match.module.css";
 
 /*
  * Match
@@ -13,6 +15,7 @@ const Match = (props) => {
     gameDuration: 0,
     gameCreation: 0,
     teams: [],
+    participants: [],
   });
 
   const fetchMatchHandler = useCallback(async () => {
@@ -37,7 +40,7 @@ const Match = (props) => {
         gameDuration: info.gameDuration,
         gameCreation: info.gameCreation,
         teams: info.teams,
-        // participants: [...info.participants],
+        participants: info.participants,
       };
       setMatchInfo(dataInfo);
     } catch (error) {}
@@ -47,18 +50,31 @@ const Match = (props) => {
     fetchMatchHandler();
   }, [fetchMatchHandler]);
 
+  const index = findIndex(props.puuid, matchParticipants);
+
   return (
-    <div>
-      <GameType
-        puuid={props.puuid}
-        queueId={matchInfo.queueId}
-        gameDuration={matchInfo.gameDuration}
-        gameCreation={matchInfo.gameCreation}
-        teams={matchInfo.teams}
-        participants={matchParticipants}
+    <div className={`${styles["info-container"]}`}>
+      <GameType queues={props.queues} matchInfo={matchInfo} index={index} />
+      <ChampUsed
+        index={index}
+        matchInfo={matchInfo}
+        summonerSpells={props.summonerSpells}
       />
     </div>
   );
+};
+
+/**
+ * findIndex
+ * Finds the index of the player from the list of participants
+ * by using their puuid
+ * @param {*} playerPuuid
+ * @param {*} participants
+ * @returns
+ */
+const findIndex = (playerPuuid, participants) => {
+  const key = (puuid) => puuid === playerPuuid;
+  return participants.findIndex(key);
 };
 
 export default Match;

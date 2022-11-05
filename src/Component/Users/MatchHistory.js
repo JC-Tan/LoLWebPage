@@ -13,7 +13,7 @@ const MatchHistory = (props) => {
     if (puuid.length === 0) {
       return;
     }
-    const matchListURL = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=10&api_key=${process.env.REACT_APP_API_KEY}`;
+    const matchListURL = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=5&api_key=${process.env.REACT_APP_API_KEY}`;
 
     try {
       const response = await fetch(matchListURL);
@@ -35,7 +35,13 @@ const MatchHistory = (props) => {
     <Fragment>
       <ul>
         {matchList.map((match) => (
-          <Match key={match} puuid={puuid} matchId={match} />
+          <Match
+            key={match}
+            puuid={puuid}
+            matchId={match}
+            queues={props.queues}
+            summonerSpells={props.summonerSpells}
+          />
         ))}
       </ul>
     </Fragment>
