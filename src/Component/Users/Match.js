@@ -59,6 +59,7 @@ const Match = (props) => {
         index={index}
         matchInfo={matchInfo}
         summonerSpells={props.summonerSpells}
+        runes={props.runes}
       />
     </div>
   );

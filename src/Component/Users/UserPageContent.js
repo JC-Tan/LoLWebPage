@@ -9,6 +9,7 @@ const UserPageContent = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [queues, setQueues] = useState({});
   const [summonerSpells, setSummonerSpells] = useState({});
+  const [runes, setRunes] = useState([]);
 
   const usernameHandler = (enteredUser) => {
     setEnteredUsername(enteredUser);
@@ -17,6 +18,7 @@ const UserPageContent = (props) => {
   useEffect(() => {
     fetchMatchListHandler();
     fetchSummonerSpellsHandler();
+    fetchRunesHandler();
   }, []);
 
   const fetchMatchListHandler = async () => {
@@ -41,7 +43,7 @@ const UserPageContent = (props) => {
       const response = await fetch(summonerURL);
 
       if (!response.ok) {
-        throw new Error("Queues fetch failed!");
+        throw new Error("Summoner spells fetch failed!");
       }
 
       const data = await response.json();
@@ -49,6 +51,24 @@ const UserPageContent = (props) => {
     } catch (error) {}
   };
 
+  const fetchRunesHandler = async () => {
+    // Rune resources:
+    // https://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/runesReforged.json
+    // https://ddragon.leagueoflegends.com/cdn/img/+path it's icon property
+    // https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png
+    const runeURL =
+      "https://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/runesReforged.json";
+    try {
+      const response = await fetch(runeURL);
+
+      if (!response.ok) {
+        throw new Error("Runes fetch failed!");
+      }
+
+      const data = await response.json();
+      setRunes(data);
+    } catch (error) {}
+  };
   return (
     <div>
       <h3>TODO: Styles...</h3>
@@ -61,6 +81,7 @@ const UserPageContent = (props) => {
           name={enteredUsername}
           queues={queues}
           summonerSpells={summonerSpells}
+          runes={runes}
         ></User>
       </div>
     </div>

@@ -58,6 +58,7 @@ const User = (props) => {
         puuid={userData.puuid}
         queues={props.queues}
         summonerSpells={props.summonerSpells}
+        runes={props.runes}
       />
     </div>
   );

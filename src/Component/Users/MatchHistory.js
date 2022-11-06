@@ -41,6 +41,7 @@ const MatchHistory = (props) => {
             matchId={match}
             queues={props.queues}
             summonerSpells={props.summonerSpells}
+            runes={props.runes}
           />
         ))}
       </ul>

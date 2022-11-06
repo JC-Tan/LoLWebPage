@@ -1,0 +1,32 @@
+.main-wrapper {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.champ-image {
+    display: block;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.tiny-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tiny {
+    width: 22px;
+    height: 22px;
+    border-radius: 4%;
+}
+
+.primary {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: black;
+}
