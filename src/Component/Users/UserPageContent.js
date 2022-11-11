@@ -10,6 +10,7 @@ const UserPageContent = (props) => {
   const [queues, setQueues] = useState({});
   const [summonerSpells, setSummonerSpells] = useState({});
   const [runes, setRunes] = useState([]);
+  const [items, setItems] = useState({});
 
   const usernameHandler = (enteredUser) => {
     setEnteredUsername(enteredUser);
@@ -19,6 +20,7 @@ const UserPageContent = (props) => {
     fetchMatchListHandler();
     fetchSummonerSpellsHandler();
     fetchRunesHandler();
+    fetchItemHandler();
   }, []);
 
   const fetchMatchListHandler = async () => {
@@ -69,6 +71,22 @@ const UserPageContent = (props) => {
       setRunes(data);
     } catch (error) {}
   };
+
+  const fetchItemHandler = async () => {
+    const itemURL =
+      "https://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/item.json";
+
+    try {
+      const response = await fetch(itemURL);
+
+      if (!response.ok) {
+        throw new Error("Item fetch failed!");
+      }
+
+      const data = await response.json();
+      setItems(data);
+    } catch (error) {}
+  };
   return (
     <div>
       <h3>TODO: Styles...</h3>
@@ -82,6 +100,7 @@ const UserPageContent = (props) => {
           queues={queues}
           summonerSpells={summonerSpells}
           runes={runes}
+          items={items}
         ></User>
       </div>
     </div>

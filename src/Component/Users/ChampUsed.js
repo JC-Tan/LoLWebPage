@@ -1,3 +1,4 @@
+import SmallCard from "../UI/SmallCard";
 import styles from "./ChampUsed.module.css";
 
 const ChampUsed = (props) => {
@@ -7,6 +8,7 @@ const ChampUsed = (props) => {
   const participants = props.matchInfo.participants;
   const player = participants[props.index];
   const champUsed = player.championName;
+  const level = player.champLevel;
 
   const summoner1 = grabSummonerSpellName(
     player.summoner1Id,
@@ -28,8 +30,7 @@ const ChampUsed = (props) => {
 
   const secondaryStyle = grabSecondaryStyleHandler(sStyle.style, props.runes);
 
-  console.log(primaryStyle);
-  const champImageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champUsed}_0.jpg`;
+  const champImageURL = `http://ddragon.leagueoflegends.com/cdn/12.21.1/img/champion/${champUsed}.png`;
   const summoner1URL = `http://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${summoner1}.png`;
   const summoner2URL = `http://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${summoner2}.png`;
   const primaryStyleURL = `https://ddragon.leagueoflegends.com/cdn/img/${primaryStyle.icon}`;
@@ -45,13 +46,22 @@ const ChampUsed = (props) => {
         />
       </div>
       <div className={`${styles["tiny-wrapper"]}`}>
-        <img className={styles.tiny} src={summoner1URL} alt="Loading" />
-        <img className={styles.tiny} src={summoner2URL} alt="Loading" />
+        <SmallCard>
+          <img src={summoner1URL} alt="Loading" />
+        </SmallCard>
+        <SmallCard>
+          <img src={summoner2URL} alt="Loading" />
+        </SmallCard>
       </div>
       <div className={`${styles["tiny-wrapper"]}`}>
-        <img className={styles.primary} src={primaryStyleURL} alt="Loading" />
-        <img className={styles.tiny} src={secondaryStyleURL} alt="Loading" />
+        <SmallCard>
+          <img className={styles.primary} src={primaryStyleURL} alt="Loading" />
+        </SmallCard>
+        <SmallCard>
+          <img src={secondaryStyleURL} alt="Loading" />
+        </SmallCard>
       </div>
+      <h3>{level}</h3>
     </div>
   );
 };

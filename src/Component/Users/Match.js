@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import ChampUsed from "./ChampUsed";
 import GameType from "./GameType";
+import KDA from "./KDA";
 import styles from "./Match.module.css";
+import Participants from "./Participants";
+import UserItems from "./UserItems";
 
 /*
  * Match
@@ -61,6 +64,9 @@ const Match = (props) => {
         summonerSpells={props.summonerSpells}
         runes={props.runes}
       />
+      <KDA matchInfo={matchInfo} index={index} />
+      <UserItems matchInfo={matchInfo} index={index} />
+      <Participants matchInfo={matchInfo} />
     </div>
   );
 };
