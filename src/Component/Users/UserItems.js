@@ -1,4 +1,5 @@
 import SmallCard from "../UI/SmallCard";
+import styles from "./UserItems.module.css";
 
 const UserItems = (props) => {
   if (props.matchInfo.participants.length === 0) {
@@ -16,29 +17,44 @@ const UserItems = (props) => {
   const item5 = retrieveItemURL(player.item5);
   const item6 = retrieveItemURL(player.item6);
 
+  const emptyDiv = <div className={`${styles["empty-div"]}`}></div>;
+
+  const ImageDiv = (item) => {
+    return <img src={item} alt="Loading..." />;
+  };
+
+  /**
+   * SmallCardFetcher
+   * Checks if item is empty or not. If empty, then
+   * it will return a greyed out div. Otherwise,
+   * it will return an image of the item
+   * @param {*} item
+   * @returns
+   */
+  const SmallCardFetcher = (item) => {
+    const check = item === "";
+    return (
+      <SmallCard
+        className={`${styles["item-container"]} ${
+          check && styles["empty-div"]
+        }`}
+      >
+        {check ? emptyDiv : ImageDiv(item)}
+      </SmallCard>
+    );
+  };
+
   return (
-    <div>
-      <SmallCard>
-        {item0 === "" ? <br /> : <img src={item0} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item1 === "" ? <br /> : <img src={item1} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item2 === "" ? <br /> : <img src={item2} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item3 === "" ? <br /> : <img src={item3} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item4 === "" ? <br /> : <img src={item4} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item5 === "" ? <br /> : <img src={item5} alt="Loading..." />}
-      </SmallCard>
-      <SmallCard>
-        {item6 === "" ? <br /> : <img src={item6} alt="Loading..." />}
-      </SmallCard>
+    <div className={`${styles["item-container"]}`}>
+      <div className={`${styles["main-items"]}`}>
+        {SmallCardFetcher(item0)}
+        {SmallCardFetcher(item1)}
+        {SmallCardFetcher(item2)}
+        {SmallCardFetcher(item3)}
+        {SmallCardFetcher(item4)}
+        {SmallCardFetcher(item5)}
+      </div>
+      <div>{SmallCardFetcher(item6)}</div>
     </div>
   );
 };

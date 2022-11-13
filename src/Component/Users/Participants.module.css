@@ -1,11 +1,34 @@
 .main-container {
+    height: 100%;
+    display: flex;
+}
+
+.team {
+    padding-top: 6px;
     flex: 1 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    gap: 2px;
+}
+
+.image-container {
+    width: 16px;
+    height: 16px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.summoner-name {
+    font-size: 12px;
+    margin-left: 3px;
 }
 
 .player-container {
     display: flex;
+    -moz-box-align: center;
     flex-direction: row;
+    align-items: center;
 }

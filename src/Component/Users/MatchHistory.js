@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import Match from "./Match";
+import styles from "./MatchHistory.module.css";
 
 /**
  * MatchHistory
@@ -33,7 +34,7 @@ const MatchHistory = (props) => {
 
   return (
     <Fragment>
-      <ul>
+      <div>
         {matchList.map((match) => (
           <Match
             key={match}
@@ -44,7 +45,7 @@ const MatchHistory = (props) => {
             runes={props.runes}
           />
         ))}
-      </ul>
+      </div>
     </Fragment>
   );
 };

@@ -1,4 +1,4 @@
-import GameMode from "./GameMode";
+import styles from "./GameType.module.css";
 
 /**
  * GameType
@@ -20,13 +20,14 @@ const GameType = (props) => {
 
   const result = gameResult(teamNum, teams);
   return (
-    <div>
-      <h2>{gameType}</h2>
-      <h2>{result}</h2>
-      <h2>{creation.toLocaleDateString()}</h2>
-      <h2>
+    <div className={`${styles["type-container"]}`}>
+      <span className={styles.type}>{gameType}</span>
+      <span className={styles.creation}>{creation.toLocaleDateString()}</span>
+      <div className={styles.bar} />
+      <span className={styles.result}>{result}</span>
+      <span className={styles.duration}>
         {minutes}m {seconds}s
-      </h2>
+      </span>
     </div>
   );
 };

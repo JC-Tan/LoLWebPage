@@ -1,0 +1,19 @@
+.type-container {
+    width: 108px;
+    margin-top: 5px;
+    margin-left: 25px;
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.victory {
+    background-color: blue;
+}
+
+.bar {
+    width: 48px;
+    height: 1px;
+    margin: 8px 0px 4px;
+}

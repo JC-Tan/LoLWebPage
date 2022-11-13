@@ -44,6 +44,7 @@ const ChampUsed = (props) => {
           src={champImageURL}
           alt="Loading"
         />
+        <span className={styles.level}>{level}</span>
       </div>
       <div className={`${styles["tiny-wrapper"]}`}>
         <SmallCard>
@@ -61,7 +62,6 @@ const ChampUsed = (props) => {
           <img src={secondaryStyleURL} alt="Loading" />
         </SmallCard>
       </div>
-      <h3>{level}</h3>
     </div>
   );
 };
