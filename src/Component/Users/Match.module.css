@@ -1,0 +1,12 @@
+.info-container {
+    display: grid;
+    grid-template-columns: 15% 20% 15% 20% 30%;
+    grid-template-rows: 95px;
+    align-items: center;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-top: 10px;
+    border-left-style: solid;
+    border-left-width: 20px;
+}

@@ -1,0 +1,11 @@
+.main-container {
+    display: block;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.form-container {
+    margin: 10px 0px;
+    width: 100%;
+}

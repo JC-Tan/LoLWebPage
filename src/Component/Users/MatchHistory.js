@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import Match from "./Match";
+import styles from "./MatchHistory.module.css";
 
 /**
  * MatchHistory
@@ -13,7 +14,7 @@ const MatchHistory = (props) => {
     if (puuid.length === 0) {
       return;
     }
-    const matchListURL = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=10&api_key=${process.env.REACT_APP_API_KEY}`;
+    const matchListURL = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=5&api_key=${process.env.REACT_APP_API_KEY}`;
 
     try {
       const response = await fetch(matchListURL);
@@ -33,11 +34,18 @@ const MatchHistory = (props) => {
 
   return (
     <Fragment>
-      <ul>
+      <div>
         {matchList.map((match) => (
-          <Match key={match} puuid={puuid} matchId={match} />
+          <Match
+            key={match}
+            puuid={puuid}
+            matchId={match}
+            queues={props.queues}
+            summonerSpells={props.summonerSpells}
+            runes={props.runes}
+          />
         ))}
-      </ul>
+      </div>
     </Fragment>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import MatchHistory from "./MatchHistory";
+import styles from "./User.module.css";
 
 /**
  * User
@@ -47,10 +48,27 @@ const User = (props) => {
   }, [fetchUserInfoHandler]);
 
   let content = (
-    <div>
-      <h1>name: {userData.name}</h1>
-      <h1>summonerLevel: {userData.summonerLevel}</h1>
-      <MatchHistory puuid={userData.puuid} />
+    <div className={`${styles["main-container"]}`}>
+      <div className={`${styles["user-container"]}`}>
+        <div className={`${styles["image-container"]}`}>
+          <img
+            src={`https://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${userData.profileIconId}.png`}
+            alt="Loading"
+          />
+        </div>
+        <div className={`${styles["name-container"]}`}>
+          <span className={styles.name}>{userData.name}</span>
+          <span className={styles.level}>Level {userData.summonerLevel}</span>
+        </div>
+      </div>
+      <div className={`${styles["history-container"]}`}>
+        <MatchHistory
+          puuid={userData.puuid}
+          queues={props.queues}
+          summonerSpells={props.summonerSpells}
+          runes={props.runes}
+        />
+      </div>
     </div>
   );
 

@@ -1,0 +1,17 @@
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-items {
+    display: grid;
+    grid-template-columns: repeat(3, 0.1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.empty-div {
+    background-color: #808080;
+    border-radius: 10%;
+}

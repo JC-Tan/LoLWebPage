@@ -1,26 +1,40 @@
 import { useRef } from "react";
+import styles from "./Form.module.css";
 
+/**
+ * Form
+ * Contains the search box and button
+ * @param {*} props
+ * @returns
+ */
 const Form = (props) => {
   const usernameInputRef = useRef();
+  const buttonURL =
+    "https://www.freeiconspng.com/uploads/search-icon-png-1.png";
 
   const submitHandler = (event) => {
     event.preventDefault();
     props.onAddUsername(usernameInputRef.current.value);
   };
+
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          required
-          id="username"
-          placeholder="Enter a username"
-          ref={usernameInputRef}
-        />
-      </div>
-      <div>
-        <button type="submit">Submit</button>
+      <div className={styles.container}>
+        <div className={styles.search}>
+          <input
+            className={`${styles["input-box"]}`}
+            type="text"
+            required
+            id="username"
+            placeholder="Enter a username"
+            ref={usernameInputRef}
+          />
+        </div>
+        <div className={`${styles["button-container"]}`}>
+          <button className={`${styles["submit-button"]}`} type="submit">
+            <img src={buttonURL} />
+          </button>
+        </div>
       </div>
     </form>
   );
