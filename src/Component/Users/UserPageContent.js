@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Form from "./Form";
 import User from "./User";
-
+import styles from "./UserPage.module.css";
 /* UserPageContent
  * This is the wrapper for all of a user's information
  */
@@ -88,13 +88,11 @@ const UserPageContent = (props) => {
     } catch (error) {}
   };
   return (
-    <div>
-      <h3>TODO: Styles...</h3>
-      <div>
+    <div className={`${styles["main-container"]}`}>
+      <div className={`${styles["form-container"]}`}>
         <Form onAddUsername={usernameHandler} />
       </div>
-      <div>
-        <h1>User Info</h1>
+      <div className={`${styles["user-container"]}`}>
         <User
           name={enteredUsername}
           queues={queues}
